@@ -40,6 +40,7 @@ export default function Home() {
   const [editRestaurantsMap, setEditRestaurantsMap] = useState<Record<string, Restaurant>>({});
   const [searchQuery, setSearchQuery] = useState("");
   const [deletedIds, setDeletedIds] = useState<string[]>([]);
+  const [originalRestaurantIds, setOriginalRestaurantIds] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     setIsClient(true);
@@ -58,12 +59,18 @@ export default function Home() {
     fetch("/restaurants.json")
       .then((res) => res.json())
       .then((data) => {
+        // Salva gli IDs originali per identificare i ristoranti nuovi
+        setOriginalRestaurantIds(new Set(data.restaurants.map((r: Restaurant) => r.id)));
+
         let allRestaurants = [...data.restaurants];
 
-        // Aggiungi i ristoranti salvati in localStorage
+        // Aggiungi i ristoranti salvati in localStorage (SOLO i nuovi, non i duplicati)
         const newRestaurants = localStorage.getItem("newRestaurants");
         if (newRestaurants) {
-          allRestaurants = [...allRestaurants, ...JSON.parse(newRestaurants)];
+          const parsed = JSON.parse(newRestaurants);
+          // Filtra: mantieni solo i ristoranti che NON sono negli originali
+          const onlyNewOnes = parsed.filter((r: Restaurant) => !data.restaurants.some((orig: Restaurant) => orig.id === r.id));
+          allRestaurants = [...allRestaurants, ...onlyNewOnes];
         }
 
         // Applica le modifiche (override per id)
@@ -128,10 +135,9 @@ export default function Home() {
     const updated = [...restaurants, restaurant];
     setRestaurants(updated);
 
-    // Salva SOLO i nuovi ristoranti aggiunti (quelli che non sono nel JSON originale)
-    const savedNew = localStorage.getItem("newRestaurants");
-    const existingNew = savedNew ? JSON.parse(savedNew) : [];
-    const newRestaurantsOnly = [...existingNew, restaurant];
+    // Salva SOLO i ristoranti nuovi (non gli originali)
+    // Filtra: mantieni solo quelli che non sono negli originali
+    const newRestaurantsOnly = updated.filter(r => !originalRestaurantIds.has(r.id));
     localStorage.setItem("newRestaurants", JSON.stringify(newRestaurantsOnly));
 
     setIsModalOpen(false);

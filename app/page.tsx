@@ -132,13 +132,18 @@ export default function Home() {
       hours: "Lun-Dom: 11:00-23:00",
     };
 
-    const updated = [...restaurants, restaurant];
-    setRestaurants(updated);
+    // Aggiorna lo stato locale
+    setRestaurants(prev => [...prev, restaurant]);
 
-    // Salva SOLO i ristoranti nuovi (non gli originali)
-    // Filtra: mantieni solo quelli che non sono negli originali
-    const newRestaurantsOnly = updated.filter(r => !originalRestaurantIds.has(r.id));
-    localStorage.setItem("newRestaurants", JSON.stringify(newRestaurantsOnly));
+    // Carica i ristoranti nuovi esistenti da localStorage
+    const existing = localStorage.getItem("newRestaurants");
+    const newList = existing ? JSON.parse(existing) : [];
+
+    // Aggiungi SOLO il nuovo ristorante (non tutta la lista)
+    newList.push(restaurant);
+
+    // Salva la lista aggiornata
+    localStorage.setItem("newRestaurants", JSON.stringify(newList));
 
     setIsModalOpen(false);
   };

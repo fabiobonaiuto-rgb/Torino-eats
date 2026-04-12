@@ -41,6 +41,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [deletedIds, setDeletedIds] = useState<string[]>([]);
   const [originalRestaurantIds, setOriginalRestaurantIds] = useState<Set<string>>(new Set());
+  const [sortBy, setSortBy] = useState<"name" | "recent" | "rating">("name");
 
   useEffect(() => {
     setIsClient(true);
@@ -93,7 +94,7 @@ export default function Home() {
   }, []);
 
   // Filtra ristoranti per categoria, ricerca e eliminati
-  const filteredRestaurants = restaurants.filter((r) => {
+  let filteredRestaurants = restaurants.filter((r) => {
     const matchCategory = selectedCategory
       ? r.category.toLowerCase() === selectedCategory.toLowerCase()
       : true;
@@ -103,6 +104,23 @@ export default function Home() {
     const notDeleted = !deletedIds.includes(r.id);
     return matchCategory && matchSearch && notDeleted;
   });
+
+  // Ordina in base al sortBy
+  if (sortBy === "name") {
+    filteredRestaurants = [...filteredRestaurants].sort((a, b) =>
+      a.name.localeCompare(b.name, "it")
+    );
+  } else if (sortBy === "recent") {
+    // I ristoranti aggiunti di recente sono alla fine dell'array
+    filteredRestaurants = [...filteredRestaurants].reverse();
+  } else if (sortBy === "rating") {
+    // Ordina dalla più valutata alla meno valutata
+    filteredRestaurants = [...filteredRestaurants].sort((a, b) => {
+      const ratingA = ratings[a.id] || 0;
+      const ratingB = ratings[b.id] || 0;
+      return ratingB - ratingA;
+    });
+  }
 
   const toggleFavorite = (id: string) => {
     const updated = favorites.includes(id)
@@ -284,15 +302,29 @@ export default function Home() {
       {/* Search Bar */}
       <div className="bg-white border-b border-gray-100 px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-7xl mx-auto">
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Cerca ristorante..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all text-gray-900 placeholder-gray-700"
-            />
+          <div className="flex flex-col gap-4">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Cerca ristorante..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all text-gray-900 placeholder-gray-700"
+              />
+            </div>
+            <div className="flex gap-2 flex-wrap">
+              <span className="text-sm text-gray-600 font-medium self-center">Ordina per:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as "name" | "recent" | "rating")}
+                className="px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors cursor-pointer focus:ring-2 focus:ring-red-500 focus:border-transparent"
+              >
+                <option value="name">Alfabetico (A-Z)</option>
+                <option value="recent">Ultima aggiunta</option>
+                <option value="rating">Stelle (più valutati)</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>

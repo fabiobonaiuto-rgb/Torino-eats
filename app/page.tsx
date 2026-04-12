@@ -208,17 +208,17 @@ export default function Home() {
           <div className="absolute top-8 right-8 z-50 flex items-center gap-3">
             <button
               onClick={() => setIsModalOpen(true)}
-              style={{ backgroundColor: "#a81c39" }}
-              className="flex items-center gap-2 px-4 py-2 text-white rounded-lg hover:opacity-90 transition-colors font-medium"
+              className="hover:scale-125 hover:rotate-90 transition-all duration-300"
             >
-              <Plus className="w-4 h-4" />
-              <span className="text-sm">Aggiungi</span>
+              <Plus className="w-6 h-6" style={{ color: "#a81c39" }} strokeWidth={3} />
             </button>
             <Link
               href="/favorites"
               className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              <Heart className="w-5 h-5 fill-current" style={{ color: "#a81c39" }} />
+              <div className="hover:scale-150 transition-transform duration-300">
+                <Heart className="w-5 h-5 fill-current" style={{ color: "#a81c39" }} />
+              </div>
               <span className="text-sm font-medium text-gray-700">
                 {favorites.length}
               </span>
@@ -258,7 +258,7 @@ export default function Home() {
       </div>
 
       {/* Categories Filter */}
-      <nav className="sticky top-16 z-50 bg-white border-b border-gray-100 w-full px-4 sm:px-6 lg:px-8 py-4">
+      <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 w-full px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-7xl mx-auto flex gap-1 overflow-x-auto pb-2">
           <button
             onClick={() => setSelectedCategory(null)}
@@ -295,9 +295,9 @@ export default function Home() {
         )}
 
         {/* Grid di Ristoranti */}
-        {isClient ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredRestaurants.map((restaurant, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {isClient && restaurants.length > 0 ? (
+            filteredRestaurants.map((restaurant, index) => (
             <div
               key={restaurant.id}
               onMouseEnter={() => setHoveredRestaurantId(restaurant.id)}
@@ -314,7 +314,7 @@ export default function Home() {
                     src={restaurant.image}
                     alt={restaurant.name}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <button
@@ -409,15 +409,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(6)].map((_, i) => (
+            ))
+          ) : (
+            [...Array(6)].map((_, i) => (
               <div key={i} className="rounded-2xl bg-gray-100 h-64 animate-pulse" />
-            ))}
-          </div>
-        )}
+            ))
+          )}
+        </div>
 
         {/* Empty State */}
         {isClient && filteredRestaurants.length === 0 && (

@@ -25,6 +25,9 @@ const config: Config = {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
       },
+      animation: {
+        heartbeat: "heartbeat 0.6s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

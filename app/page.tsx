@@ -6,6 +6,7 @@ import Link from "next/link";
 import AddRestaurantModal from "@/components/AddRestaurantModal";
 import EditRestaurantModal from "@/components/EditRestaurantModal";
 import StarRating from "@/components/StarRating";
+import { HeroSection } from "@/components/HeroSection";
 
 interface Restaurant {
   id: string;
@@ -232,72 +233,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section - Asimmetrico */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Content a sinistra */}
-          <div
-            className="flex flex-col justify-center"
-            style={{
-              animation: "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0s both",
-            }}
-          >
-            <h2
-              className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight"
-              style={{
-                animation: "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both",
-              }}
-            >
-              Mangia bene a Torino
-            </h2>
-            <p
-              className="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg"
-              style={{
-                animation: "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both",
-              }}
-            >
-              Scopri i posti più autentici dove mangiare. Dalle paste fresche artigianali alle cucine del mondo, tutto a Torino.
-            </p>
-          </div>
-
-          {/* Stats a destra */}
-          <div className="grid grid-cols-2 gap-4">
-            <div
-              className="rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-              style={{
-                backgroundColor: "#f5e8ea",
-                borderColor: "#d4a5b0",
-                border: "1px solid",
-                animation: "fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both",
-              }}
-            >
-              <div className="text-4xl font-bold mb-2" style={{ color: "#7d1d35" }}>{restaurants.length}</div>
-              <p className="font-medium" style={{ color: "#7d1d35" }}>Ristoranti</p>
-            </div>
-            <div
-              className="bg-gray-50 rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
-              style={{
-                animation: "fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both",
-              }}
-            >
-              <div className="text-4xl font-bold text-gray-900 mb-2">{categories.length}</div>
-              <p className="text-gray-700 font-medium">Categorie</p>
-            </div>
-            <div
-              className="bg-gray-50 rounded-2xl p-6 border border-gray-200 col-span-2 shadow-sm hover:shadow-md transition-shadow"
-              style={{
-                animation: "fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both",
-              }}
-            >
-              <p className="text-sm text-gray-600 mb-2">Salvati</p>
-              <div className="flex items-center gap-2">
-                <Heart className="w-5 h-5 fill-current" style={{ color: "#a81c39" }} />
-                <span className="text-2xl font-bold text-gray-900">{favorites.length}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section - Cinematic 3D */}
+      <HeroSection />
 
       {/* Search Bar */}
       <div className="bg-white border-b border-gray-100 px-4 sm:px-6 lg:px-8 py-4">

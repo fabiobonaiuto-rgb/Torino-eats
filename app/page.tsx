@@ -201,40 +201,31 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900 tracking-tight">
-              Torino Eats
-            </h1>
-            {isClient && (
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  style={{ backgroundColor: "#a81c39" }}
-                  className="flex items-center gap-2 px-4 py-2 text-white rounded-lg hover:opacity-90 transition-colors font-medium"
-                >
-                  <Plus className="w-4 h-4" />
-                  <span className="text-sm">Aggiungi</span>
-                </button>
-                <Link
-                  href="/favorites"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  <Heart className="w-5 h-5 fill-current" style={{ color: "#a81c39" }} />
-                  <span className="text-sm font-medium text-gray-700">
-                    {favorites.length}
-                  </span>
-                </Link>
-              </div>
-            )}
+      {/* Hero Section with integrated controls */}
+      <div className="relative">
+        <HeroSection restaurantCount={restaurants.length} />
+        {isClient && (
+          <div className="absolute top-8 right-8 z-50 flex items-center gap-3">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              style={{ backgroundColor: "#a81c39" }}
+              className="flex items-center gap-2 px-4 py-2 text-white rounded-lg hover:opacity-90 transition-colors font-medium"
+            >
+              <Plus className="w-4 h-4" />
+              <span className="text-sm">Aggiungi</span>
+            </button>
+            <Link
+              href="/favorites"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <Heart className="w-5 h-5 fill-current" style={{ color: "#a81c39" }} />
+              <span className="text-sm font-medium text-gray-700">
+                {favorites.length}
+              </span>
+            </Link>
           </div>
-        </div>
-      </header>
-
-      {/* Hero Section - Cinematic 3D */}
-      <HeroSection />
+        )}
+      </div>
 
       {/* Search Bar */}
       <div className="bg-white border-b border-gray-100 px-4 sm:px-6 lg:px-8 py-4">

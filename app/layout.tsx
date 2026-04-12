@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Torino Eats",
   description: "Scopri i migliori posti dove mangiare a Torino",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

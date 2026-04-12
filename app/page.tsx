@@ -127,7 +127,13 @@ export default function Home() {
 
     const updated = [...restaurants, restaurant];
     setRestaurants(updated);
-    localStorage.setItem("newRestaurants", JSON.stringify(updated));
+
+    // Salva SOLO i nuovi ristoranti aggiunti (quelli che non sono nel JSON originale)
+    const savedNew = localStorage.getItem("newRestaurants");
+    const existingNew = savedNew ? JSON.parse(savedNew) : [];
+    const newRestaurantsOnly = [...existingNew, restaurant];
+    localStorage.setItem("newRestaurants", JSON.stringify(newRestaurantsOnly));
+
     setIsModalOpen(false);
   };
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Heart, MapPin, Star, Search, ArrowRight, Plus, Pencil, Trash2 } from "lucide-react";
+import { Heart, MapPin, Star, Search, ArrowRight, Plus, Pencil, Trash2, Map } from "lucide-react";
 import Link from "next/link";
 import AddRestaurantModal from "@/components/AddRestaurantModal";
 import EditRestaurantModal from "@/components/EditRestaurantModal";
@@ -20,6 +20,8 @@ interface Restaurant {
   address: string;
   phone?: string;
   hours?: string;
+  lat?: number;
+  lng?: number;
 }
 
 interface Category {
@@ -205,13 +207,24 @@ export default function Home() {
       <div className="relative">
         <HeroSection restaurantCount={restaurants.length} />
         {isClient && (
-          <div className="absolute top-8 right-8 z-50 flex items-center gap-3">
+          <div className="absolute top-8 right-8 z-50 flex items-center gap-2">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="hover:scale-125 hover:rotate-90 transition-all duration-300"
+              className="flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-colors hover:scale-110 hover:rotate-90 duration-300"
             >
-              <Plus className="w-6 h-6" style={{ color: "#a81c39" }} strokeWidth={3} />
+              <Plus className="w-5 h-5" style={{ color: "#a81c39" }} strokeWidth={3} />
             </button>
+            <Link
+              href="/map"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <div className="hover:scale-110 transition-transform duration-300">
+                <Map className="w-5 h-5" style={{ color: "#a81c39" }} />
+              </div>
+              <span className="text-sm font-medium text-gray-700 hidden sm:inline">
+                Mappa
+              </span>
+            </Link>
             <Link
               href="/favorites"
               className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
@@ -298,8 +311,9 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {isClient && restaurants.length > 0 ? (
             filteredRestaurants.map((restaurant, index) => (
-            <div
+            <Link
               key={restaurant.id}
+              href={`/restaurant/${restaurant.id}`}
               onMouseEnter={() => setHoveredRestaurantId(restaurant.id)}
               onMouseLeave={() => setHoveredRestaurantId(null)}
               style={{
@@ -408,7 +422,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
             ))
           ) : (
             [...Array(6)].map((_, i) => (

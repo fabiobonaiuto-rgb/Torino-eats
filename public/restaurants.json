@@ -9,7 +9,7 @@
       "priceRange": "15-25",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/1. Banco Vini ed Alimenti.jpg",
-      "address": "Via dei Mercanti 13/F, 10122 Torino",
+      "address": "Via San Dalmazzo 24 scala B, 10122 Torino",
       "phone": "+39 011 7640239",
       "hours": "Lun-Sab: 11:00-20:00",
       "specialties": [
@@ -17,7 +17,9 @@
         "Salumi",
         "Formaggi"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0714561,
+      "lng": 7.6762867
     },
     {
       "id": "bello-e-buono",
@@ -28,14 +30,16 @@
       "priceRange": "12-20",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/2. Bello e Buono.jpg",
-      "address": "Via Catania 9, 10153 Torino",
+      "address": "Corso Vittorio Emanuele II 130, 10138 Torino",
       "phone": "+39 011 000 0000",
       "hours": "Lun-Sab: 17:00-01:00",
       "specialties": [
         "Aperitivo",
         "Stuzzichini"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0714883,
+      "lng": 7.6582138
     },
     {
       "id": "bicyclette",
@@ -46,13 +50,15 @@
       "priceRange": "10-16",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/3. Bicyclette.jpg",
-      "address": "Via Sant'Agostino 4/d, 10122 Torino",
+      "address": "Piazza Vincenzo Arbarello 7, 10122 Torino",
       "phone": "+39 011 4369705",
       "hours": "Lun-Sab: 10:00-20:00",
       "specialties": [
         "Crepes"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0736398,
+      "lng": 7.6767524
     },
     {
       "id": "bistrot-torrefazione",
@@ -63,14 +69,16 @@
       "priceRange": "8-18",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/4. Bistrot Torrefazione.jpg",
-      "address": "Via Madama Cristina 20/C, 10125 Torino",
+      "address": "Via Susa 33, 10138 Torino",
       "phone": "+39 011 6698624",
       "hours": "Lun-Sab: 07:00-20:00",
       "specialties": [
         "Caffè",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.073672,
+      "lng": 7.6586791
     },
     {
       "id": "bottega-baretti",
@@ -81,13 +89,15 @@
       "priceRange": "12-22",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/5. Bottega Baretti.jpg",
-      "address": "Via Sant'Anselmo 28, 10125 Torino",
+      "address": "Via Nizza 29 scala C, 10125 Torino",
       "phone": "+39 011 7900331",
       "hours": "Lun-Dom: 11:00-23:00",
       "specialties": [
         "Pizza"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.058088,
+      "lng": 7.6778833
     },
     {
       "id": "broccia",
@@ -98,14 +108,16 @@
       "priceRange": "18-28",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/6. Broccia.jpg",
-      "address": "Via Nizza 39/A, 10125 Torino",
+      "address": "Via Paolo Sacchi, 10128 Torino",
       "phone": "+39 380 1855519",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
         "Brasato",
         "Bagna caoda"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0561108,
+      "lng": 7.6740504
     },
     {
       "id": "brun",
@@ -116,14 +128,16 @@
       "priceRange": "14-22",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/7. Brun.jpg",
-      "address": "Via Santa Teresa 16/D, 10122 Torino",
+      "address": "Piazza Solferino, 10121 Torino",
       "phone": "+39 011 586 5570",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
         "Pasta",
         "Piatti"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0694523,
+      "lng": 7.6777403
     },
     {
       "id": "brunch-republic",
@@ -134,14 +148,16 @@
       "priceRange": "12-20",
       "rating": 6,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/8. Brunch Republic.jpg",
-      "address": "Via Cesare Battisti 9A, 10123 Torino",
+      "address": "Via Antonio Giuseppe Bertola 2, 10121 Torino",
       "phone": "+39 342 848 1773",
       "hours": "Lun-Sab: 08:00-16:00",
       "specialties": [
         "Brunch",
         "Colazione"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0693391,
+      "lng": 7.6834051
     },
     {
       "id": "cabaret",
@@ -152,14 +168,16 @@
       "priceRange": "8-16",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/9. Cabaret.jpg",
-      "address": "Via Giuseppe e Antonio Carle 41, 10122 Torino",
+      "address": "Via Vincenzo Lancia, 10141 Torino",
       "phone": "+39 011 504985",
       "hours": "Lun-Sab: 07:00-20:00",
       "specialties": [
         "Caffè",
         "Cornetti"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0628749,
+      "lng": 7.6413038
     },
     {
       "id": "caffe-orologio",
@@ -170,14 +188,16 @@
       "priceRange": "10-18",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/11. Caffè dell'Orologio.jpg",
-      "address": "Via Oddino Morgari 16/A, 10100 Torino",
+      "address": "Via Nizza 51, 10125 Torino",
       "phone": "+39 011 1948 4555",
       "hours": "Lun-Sab: 07:00-20:00",
       "specialties": [
         "Caffè",
         "Piatti"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0542302,
+      "lng": 7.6759858
     },
     {
       "id": "caffe-rugantino",
@@ -188,14 +208,16 @@
       "priceRange": "8-15",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/10. Caffè Rugantino.jpg",
-      "address": "Corso Sebastopoli 211/B, 10137 Torino",
+      "address": "10141 Torino",
       "phone": "+39 011 323605",
       "hours": "Lun-Sab: 07:00-20:00",
       "specialties": [
         "Caffè",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0629318,
+      "lng": 7.6412181
     },
     {
       "id": "ciotola-di-riso",
@@ -206,14 +228,16 @@
       "priceRange": "8-14",
       "rating": 7.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/12. Ciotola di Riso.jpg",
-      "address": "Torino",
+      "address": "Via Belfiore 61b, 10126 Torino",
       "phone": "",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
         "Riso",
         "Piatti asiatici"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0513418,
+      "lng": 7.6773935
     },
     {
       "id": "ciro",
@@ -224,14 +248,16 @@
       "priceRange": "15-20",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/13. Ciro.jpg",
-      "address": "Corso Vinzaglio 17, 10121 Torino",
+      "address": "Via Giuseppe Giusti 8a, 10121 Torino",
       "phone": "+39 011 531925",
       "hours": "Lun-Sab: 12:00-14:30, 19:00-23:00",
       "specialties": [
         "Pizza classica",
         "Napoletana"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0701416,
+      "lng": 7.6661228
     },
     {
       "id": "colosseum",
@@ -242,14 +268,16 @@
       "priceRange": "15-25",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/14. Colosseum.jpg",
-      "address": "Via Giulia di Barolo 29/G, 10124 Torino",
+      "address": "Via Guastalla 8, 10124 Torino",
       "phone": "+39 329 289 4427",
       "hours": "Lun-Sab: 19:00-03:00",
       "specialties": [
         "Cocktail",
         "Musica"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0693182,
+      "lng": 7.6963008
     },
     {
       "id": "crocca",
@@ -260,13 +288,15 @@
       "priceRange": "10-16",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/15. Crocca.jpg",
-      "address": "Via Madama Cristina 69, 10125 Torino",
+      "address": "Via Po 15, 10124 Torino",
       "phone": "+39 011 5617097",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
         "Pizza croccante"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0693366,
+      "lng": 7.6885492
     },
     {
       "id": "el-dorado",
@@ -277,13 +307,15 @@
       "priceRange": "20-30",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/16. El Dorado.jpg",
-      "address": "Corso San Martino 9A/Via Marco Polo 5A, 10124 Torino",
+      "address": "Via Nino Bixio, 10138 Torino",
       "phone": "+39 011 1970 0353",
       "hours": "Lun-Sab: 18:00-02:00",
       "specialties": [
         "Cocktail signature"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0694045,
+      "lng": 7.6575421
     },
     {
       "id": "feroza",
@@ -294,7 +326,7 @@
       "priceRange": "12-20",
       "rating": 7.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/17. Feroza.jpg",
-      "address": "Piazzetta Andrea Viglongo 2/E, 10122 Torino",
+      "address": "Corso Giuseppe Siccardi 11 bis, 10122 Torino",
       "phone": "+39 011 961 5715",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
@@ -302,25 +334,29 @@
         "Mantoo",
         "Shorba"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0722584,
+      "lng": 7.6758905
     },
     {
       "id": "focacceira-sans-agostino",
-      "name": "Focacceira Sans' Agostino",
+      "name": "Focacciera Sant'Agostino",
       "category": "Hamburger & Street Food",
       "cuisine": "Street food",
       "description": "Street food e focacce",
       "priceRange": "8-14",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/18. Focacceira Sans' Agostino.jpg",
-      "address": "Via Sant'Agostino 6, 10122 Torino",
+      "address": "Via Giuseppe Garibaldi 39 scala B, 10122 Torino",
       "phone": "+39 011 4365091",
       "hours": "Lun-Dom: 10:00-21:00",
       "specialties": [
         "Focacce",
         "Street food"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0738296,
+      "lng": 7.6768144
     },
     {
       "id": "focacceria-genovese",
@@ -331,13 +367,15 @@
       "priceRange": "8-15",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/19. Focacceria Genovese.jpg",
-      "address": "Via Sant'Agostino 6, 10122 Torino",
+      "address": "Piazza Diciotto Dicembre 7e, 10122 Torino",
       "phone": "+39 011 436 5091",
       "hours": "Lun-Dom: 11:00-20:00",
       "specialties": [
         "Focacce genovesi"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.073848,
+      "lng": 7.6690628
     },
     {
       "id": "gari-sushi-torino",
@@ -348,7 +386,7 @@
       "priceRange": "25-30",
       "rating": 9,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/20. Gari Sushi Torino.jpg",
-      "address": "Via Giuseppe Garibaldi 32/E, 10122 Torino",
+      "address": "Via Giovanni Bertrandi 5h, 10122 Torino",
       "phone": "+39 011 1937503",
       "hours": "Lun-Dom: 12:00-15:00, 19:00-24:00",
       "specialties": [
@@ -357,7 +395,9 @@
         "Ramen",
         "Combo"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0742425,
+      "lng": 7.6741921
     },
     {
       "id": "gastronomia-cinese",
@@ -368,14 +408,16 @@
       "priceRange": "8-16",
       "rating": 10,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/21. Gastronomia Cinese.jpg",
-      "address": "Via San Massimo 3, 10125 Torino",
+      "address": "Via Abate Antonio Vassalli-Eandi 1e, 10138 Torino",
       "phone": "+39 011 6699000",
       "hours": "Lun-Dom: 11:00-22:00",
       "specialties": [
         "Piatti cinesi",
         "Riso"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0742609,
+      "lng": 7.6664405
     },
     {
       "id": "gelateria-cecchi",
@@ -386,14 +428,16 @@
       "priceRange": "4-8",
       "rating": 7.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/22. Gelateria Cecchi.jpg",
-      "address": "Via Madama Cristina 92, 10126 Torino",
+      "address": "Corso Monte Cucco 7, 10139 Torino",
       "phone": "+39 011 6507030",
       "hours": "Lun-Dom: 12:00-23:00",
       "specialties": [
         "Gelato",
         "Artigianale"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0743288,
+      "lng": 7.6354333
     },
     {
       "id": "hamericas",
@@ -404,14 +448,16 @@
       "priceRange": "12-20",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/23. Hamerica's.jpg",
-      "address": "Via Belfiore 24, 10125 Torino",
+      "address": "Via Nizza, 10125 Torino",
       "phone": "+39 011 19486576",
       "hours": "Lun-Dom: 12:00-23:00",
       "specialties": [
         "Hamburger",
         "Patatine"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0571784,
+      "lng": 7.6768682
     },
     {
       "id": "i-frighi",
@@ -422,14 +468,16 @@
       "priceRange": "10-18",
       "rating": 7.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/24. I Frighi.jpg",
-      "address": "Via Giuseppe Verdi 45, 10124 Torino",
+      "address": "Via Sant'Ottavio, 10124 Torino",
       "phone": "+39 3761289896",
       "hours": "Lun-Sab: 17:00-02:00",
       "specialties": [
         "Aperitivo",
         "Cocktail"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0672909,
+      "lng": 7.6929279
     },
     {
       "id": "il-mago-di-oz",
@@ -440,14 +488,16 @@
       "priceRange": "10-18",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/25. Il Mago di Oz.jpg",
-      "address": "Piazza Carlo Emanuele II 19, 10123 Torino",
+      "address": "Via Giambattista Bogino, 10123 Torino",
       "phone": "+39 335 7028741",
       "hours": "Lun-Sab: 17:00-02:00",
       "specialties": [
         "Birra",
         "Aperitivo"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0665938,
+      "lng": 7.6856677
     },
     {
       "id": "il-mulo",
@@ -458,14 +508,16 @@
       "priceRange": "10-20",
       "rating": 7.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/26. Il Mulo.jpg",
-      "address": "Piazza Corpus Domini 18/B, 10122 Torino",
+      "address": "Via Giuseppe Garibaldi 23 scala A, 10122 Torino",
       "phone": "+39 011 336230",
       "hours": "Lun-Sab: 17:00-02:00",
       "specialties": [
         "Cocktail",
         "Aperitivo"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0726694,
+      "lng": 7.6802772
     },
     {
       "id": "japs",
@@ -476,14 +528,16 @@
       "priceRange": "20-30",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/27. Japs.jpg",
-      "address": "Corso De Gasperi Alcide 8, 10129 Torino",
+      "address": "Via Susa 11, 10138 Torino",
       "phone": "+39 011 4349624",
       "hours": "Lun-Dom: 12:00-23:00",
       "specialties": [
         "Sushi",
         "Nigiri"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0727016,
+      "lng": 7.6622043
     },
     {
       "id": "la-romana",
@@ -494,13 +548,15 @@
       "priceRange": "4-8",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/28. La Romana.jpg",
-      "address": "Via Madama Cristina 73, 10126 Torino",
+      "address": "Via Principi d'Acaja 49d, 10138 Torino",
       "phone": "+39 011 427 8233",
       "hours": "Lun-Dom: 12:00-23:00",
       "specialties": [
         "Gelato"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0727585,
+      "lng": 7.6621184
     },
     {
       "id": "lao",
@@ -511,13 +567,15 @@
       "priceRange": "20-30",
       "rating": 7.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/29. Lao.jpg",
-      "address": "Via Barbaroux Giuseppe 25, 10122 Torino",
+      "address": "Via Santa Maria 13g, 10122 Torino",
       "phone": "+39 011 0645387",
       "hours": "Lun-Dom: 11:30-22:00",
       "specialties": [
         "Piatti cinesi"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0723593,
+      "lng": 7.6764123
     },
     {
       "id": "madame-wang",
@@ -528,14 +586,16 @@
       "priceRange": "12-20",
       "rating": 5.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/31. Madame Wang.jpg",
-      "address": "Via Carlo Alberto 24/D, 10123 Torino",
+      "address": "Via Roma 305 scala B, 10123 Torino",
       "phone": "+39 011 5170580",
       "hours": "Lun-Dom: 11:00-21:00",
       "specialties": [
         "Piatti cinesi",
         "Piatti coreani"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0654939,
+      "lng": 7.6814366
     },
     {
       "id": "mangia-mangia",
@@ -546,24 +606,26 @@
       "priceRange": "10-18",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/32. Mangia Mangia.jpg",
-      "address": "Via Torino 2, 10100 Torino",
+      "address": "Corso Vittorio Emanuele II 74 scala B, 10121 Torino",
       "phone": "+39 011 5000000",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
         "Pizza"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0650685,
+      "lng": 7.6735322
     },
     {
       "id": "mbun",
-      "name": "M**Bun",
+      "name": "M Bun",
       "category": "Hamburger & Street Food",
       "cuisine": "Hamburger piemontesi",
       "description": "Fast food slow food",
       "priceRange": "15-20",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/30. M**Bun.jpg",
-      "address": "Corso Giuseppe Siccardi 8/A, 10122 Torino",
+      "address": "Via Generale Guido Amoretti 5a, 10121 Torino",
       "phone": "+39 011 5617097",
       "hours": "Lun-Gio: 12:00-23:00, Ven-Sab: 12:00-00:00, Dom: 12:00-23:00",
       "specialties": [
@@ -571,7 +633,9 @@
         "Patatine",
         "Birra artigianale"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0723777,
+      "lng": 7.6686607
     },
     {
       "id": "me-lo-mangio",
@@ -582,14 +646,16 @@
       "priceRange": "10-18",
       "rating": 7.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/33. Me Lo Mangio.jpg",
-      "address": "Via Porta Palatina 2, 10122 Torino",
+      "address": "Piazza Carlo Felice, 10121 Torino",
       "phone": "+39 011 436 7622",
       "hours": "Lun-Dom: 12:00-23:00",
       "specialties": [
         "Pizza",
         "Piatti"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0632436,
+      "lng": 7.6790495
     },
     {
       "id": "mo-sarpi",
@@ -600,13 +666,15 @@
       "priceRange": "10-20",
       "rating": 6.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/34. Mo Sarpi.jpg",
-      "address": "Via Giuseppe Garibaldi 17/F, 10122 Torino",
+      "address": "Via Giuseppe Barbaroux 32, 10122 Torino",
       "phone": "+39 347 480 4928",
       "hours": "Lun-Dom: 11:00-21:00",
       "specialties": [
         "Street food cinese"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0725393,
+      "lng": 7.6785594
     },
     {
       "id": "mollica",
@@ -617,13 +685,15 @@
       "priceRange": "12-20",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/35. Mollica.jpg",
-      "address": "Piazza Madama Cristina 2/bis, 10125 Torino",
+      "address": "Via Sant'Anselmo 20 scala C, 10125 Torino",
       "phone": "+39 011 000 0000",
       "hours": "Lun-Dom: 12:00-23:00",
       "specialties": [
         "Hamburger"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0589348,
+      "lng": 7.6807048
     },
     {
       "id": "oh-crispa",
@@ -634,13 +704,15 @@
       "priceRange": "8-14",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/36. Oh Crispa.jpg",
-      "address": "Via Belfiore 16bis/D, 10122 Torino",
+      "address": "Via Nizza 14a, 10125 Torino",
       "phone": "+39 371 585 4863",
       "hours": "Lun-Dom: 11:00-21:00",
       "specialties": [
         "Piatti croccanti"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0579778,
+      "lng": 7.6772338
     },
     {
       "id": "orso-laboratorio",
@@ -651,13 +723,15 @@
       "priceRange": "8-14",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/37. Orso Laboratorio.jpg",
-      "address": "Via Claudio Luigi Berthollet 30h, 10125 Torino",
+      "address": "Via Silvio Pellico 6, 10125 Torino",
       "phone": "+39 011 264 3553",
       "hours": "Lun-Sab: 08:00-19:00",
       "specialties": [
         "Dolci artigianali"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0580212,
+      "lng": 7.6813323
     },
     {
       "id": "panificio-papale",
@@ -668,14 +742,16 @@
       "priceRange": "3-10",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/38. Panificio Papale.jpg",
-      "address": "Via Berthollet Claudio Luigi 24, 10125 Torino",
+      "address": "Via Belfiore 5 scala B, 10125 Torino",
       "phone": "+39 011 6505648",
       "hours": "Lun-Sab: 06:00-19:00",
       "specialties": [
         "Pane",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.058434,
+      "lng": 7.6802868
     },
     {
       "id": "papalele",
@@ -686,14 +762,16 @@
       "priceRange": "5-12",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/39. Papalele.jpg",
-      "address": "Corso Marconi Guglielmo 23/A, 10125 Torino",
+      "address": "Via Giacomo Bove 8a, 10129 Torino",
       "phone": "+39 011 9776990",
       "hours": "Lun-Sab: 07:00-20:00",
       "specialties": [
         "Sfogliatelle",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0584662,
+      "lng": 7.6622139
     },
     {
       "id": "pasterella",
@@ -704,7 +782,7 @@
       "priceRange": "10-16",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/40. Pasterella.jpg",
-      "address": "Piazza Diciotto Dicembre 3, 10152 Torino",
+      "address": "Corso Bolzano 14, 10121 Torino",
       "phone": "+39 011 2480006",
       "hours": "Lun-Sab: 07:00-20:00",
       "specialties": [
@@ -712,7 +790,9 @@
         "Biscotti",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0699728,
+      "lng": 7.6653741
     },
     {
       "id": "pastificio-defilippis",
@@ -723,7 +803,7 @@
       "priceRange": "20-25",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/41. Pastificio Defilippis.jpg",
-      "address": "Via Lagrange 39, 10123 Torino",
+      "address": "Piazza Pietro Paleocapa 2, 10121 Torino",
       "phone": "+39 011 542137",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
@@ -731,7 +811,9 @@
         "Agnolotti",
         "Pappardelle"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0641366,
+      "lng": 7.6789409
     },
     {
       "id": "piece-ramen",
@@ -742,13 +824,15 @@
       "priceRange": "12-18",
       "rating": 5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/42. Piece Ramen.jpg",
-      "address": "Via Madama Cristina 27, 10125 Torino",
+      "address": "Via Sant'Anselmo 40 scala B, 10125 Torino",
       "phone": "+39 011 8004070",
       "hours": "Lun-Dom: 11:30-21:00",
       "specialties": [
         "Ramen"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0568648,
+      "lng": 7.6798719
     },
     {
       "id": "pier-boulangerie",
@@ -759,14 +843,16 @@
       "priceRange": "5-15",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/43. Pier Boulangerie.jpg",
-      "address": "Via Santa Croce 0/A, 10122 Torino",
+      "address": "Via Giovanni Giolitti, 10123 Torino",
       "phone": "+39 011 000 0000",
       "hours": "Lun-Sab: 07:00-19:00",
       "specialties": [
         "Pane",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0661255,
+      "lng": 7.6849765
     },
     {
       "id": "piola-cianci",
@@ -777,14 +863,16 @@
       "priceRange": "18-28",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/44. Piola Cianci.jpg",
-      "address": "Largo Quattro Marzo 9/b, 10122 Torino",
+      "address": "Via Gian Francesco Bellezia 2, 10122 Torino",
       "phone": "+39 011 9879451",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
         "Tajarin",
         "Brasato"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0733432,
+      "lng": 7.6802943
     },
     {
       "id": "piscitella",
@@ -795,14 +883,16 @@
       "priceRange": "5-10",
       "rating": 9,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/45. Piscitella.jpg",
-      "address": "Via Dell'Arsenale 34, 10121 Torino",
+      "address": "Corso Re Umberto 15 scala A, 10121 Torino",
       "phone": "+39 011 9555772",
       "hours": "Lun-Sab: 07:00-19:00",
       "specialties": [
         "Pasticceria",
         "Colazione"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.065116,
+      "lng": 7.6748547
     },
     {
       "id": "pizzeche-e-vase",
@@ -813,13 +903,15 @@
       "priceRange": "12-25",
       "rating": 7.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/46. Pizzeche 'e Vase.jpg",
-      "address": "Via San Pio V 7, 10100 Torino",
+      "address": "Via Nizza 11a, 10125 Torino",
       "phone": "+39 011 19714803",
       "hours": "Lun-Dom: 12:00-23:00",
       "specialties": [
         "Pizza napoletana"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0607242,
+      "lng": 7.6792535
     },
     {
       "id": "poormanger",
@@ -830,14 +922,16 @@
       "priceRange": "8-15",
       "rating": 6.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/47. Poormanger.jpg",
-      "address": "Via Maria Vittoria 36/B, 10123 Torino",
+      "address": "Corso Re Umberto 41e, 10128 Torino",
       "phone": "+39 011 6992310",
       "hours": "Lun-Dom: 11:00-22:00",
       "specialties": [
         "Patatine fritte",
         "Street food"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0607426,
+      "lng": 7.6715019
     },
     {
       "id": "raviolhouse",
@@ -848,14 +942,16 @@
       "priceRange": "18-28",
       "rating": 9,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/48. RaviolHouse.jpg",
-      "address": "Via Maria Vittoria 32/D, 10123 Torino",
+      "address": "Via Accademia Albertina, 10123 Torino",
       "phone": "+39 344 5900167",
       "hours": "Lun-Dom: 12:00-15:00, 19:00-23:00",
       "specialties": [
         "Ravioli",
         "Paste fresche"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0655388,
+      "lng": 7.6881587
     },
     {
       "id": "san-agostino-pizza",
@@ -866,14 +962,16 @@
       "priceRange": "12-20",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/49. San Agostino.jpg",
-      "address": "Via Sant'Agostino 20, 10122 Torino",
+      "address": "Piazza Savoia, 10100 Torino",
       "phone": "+39 011 4369001",
       "hours": "Lun-Dom: 11:00-23:00",
       "specialties": [
         "Pizza",
         "Aperitivo"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.074834,
+      "lng": 7.6774168
     },
     {
       "id": "san-thomas-break",
@@ -884,14 +982,16 @@
       "priceRange": "5-10",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/50. San Thomas Break.jpg",
-      "address": "Via San Tommaso 2/E, 10122 Torino",
+      "address": "Via San Francesco d'Assisi 8a, 10122 Torino",
       "phone": "+39 011 543341",
       "hours": "Lun-Dom: 11:00-20:00",
       "specialties": [
         "Focacce",
         "Pizze"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0719032,
+      "lng": 7.6798303
     },
     {
       "id": "st-concept",
@@ -902,14 +1002,16 @@
       "priceRange": "6-12",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/51. St Concept.jpg",
-      "address": "Via Giuseppe Barbaroux 16, 10122 Torino",
+      "address": "Via Santa Maria 2c, 10122 Torino",
       "phone": "+39 011 446 0892",
       "hours": "Lun-Sab: 08:00-19:00",
       "specialties": [
         "Caffè",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0717173,
+      "lng": 7.6788714
     },
     {
       "id": "tabui",
@@ -920,14 +1022,16 @@
       "priceRange": "20-30",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/52. Tabui.jpg",
-      "address": "Via Carlo Alberto 14, 10123 Torino",
+      "address": "10123 Torino",
       "phone": "+39 011 1873 0085",
       "hours": "Lun-Dom: 12:00-22:30",
       "specialties": [
         "Tartufo",
         "Pasta"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0671764,
+      "lng": 7.6826043
     },
     {
       "id": "tari",
@@ -938,7 +1042,7 @@
       "priceRange": "10-18",
       "rating": 9,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/53. Tari.jpg",
-      "address": "Via Mazzini 29/A, 10125 Torino",
+      "address": "Via Francesco Azzi 9 int. 21, 10139 Torino",
       "phone": "+39 011 6699077",
       "hours": "Lun-Sab: 07:00-20:00",
       "specialties": [
@@ -946,7 +1050,9 @@
         "Merende",
         "Caffè"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0672333,
+      "lng": 7.6438884
     },
     {
       "id": "terrasanta",
@@ -957,7 +1063,7 @@
       "priceRange": "5-15",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/54. Terrasanta.jpg",
-      "address": "Via Vincenzo Monti 11, 10126 Torino",
+      "address": "Via Antonio Rosmini 1, 10126 Torino",
       "phone": "+39 011 000 0000",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
@@ -965,7 +1071,9 @@
         "Hummus",
         "Tabbouleh"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0487533,
+      "lng": 7.6735242
     },
     {
       "id": "tommy-tegamino",
@@ -976,13 +1084,15 @@
       "priceRange": "10-18",
       "rating": 5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/55. Tommy Tegamino.jpg",
-      "address": "Via Carlo Alberto 18, 10123 Torino",
+      "address": "Piazza C.L.N., 10123 Torino",
       "phone": "+39 011 538889",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
         "Pizza al tegame"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0664438,
+      "lng": 7.6821175
     },
     {
       "id": "torteria",
@@ -993,14 +1103,16 @@
       "priceRange": "10-16",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/56. Torteria.jpg",
-      "address": "Via Mercanti 8/B, 10122 Torino",
+      "address": "Corso Giacomo Matteotti, 10100 Torino",
       "phone": "+39 011 5175087",
       "hours": "Lun-Sab: 08:00-20:00",
       "specialties": [
         "Torte",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0664622,
+      "lng": 7.6743654
     },
     {
       "id": "torteria-olsen",
@@ -1011,14 +1123,16 @@
       "priceRange": "5-15",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/57. Torteria Olsen.jpg",
-      "address": "Via Sant'Agostino 4/B, 10122 Torino",
+      "address": "Piazza Vincenzo Arbarello 7, 10122 Torino",
       "phone": "+39 392 3855801",
       "hours": "Lun-Sab: 08:00-20:00",
       "specialties": [
         "Torte",
         "Dolci"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0736398,
+      "lng": 7.6767525
     },
     {
       "id": "trapezzino",
@@ -1029,13 +1143,15 @@
       "priceRange": "6-12",
       "rating": 8.5,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/58. Trapezzino.jpg",
-      "address": "Piazza Carlo Emanuele II 17, 10123 Torino",
+      "address": "Via Carlo Alberto 27, 10123 Torino",
       "phone": "+39 011 1875 5933",
       "hours": "Lun-Dom: 11:00-22:00",
       "specialties": [
         "Trapezzini"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0664507,
+      "lng": 7.6855363
     },
     {
       "id": "trive",
@@ -1046,13 +1162,15 @@
       "priceRange": "12-20",
       "rating": 6,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/59. Trivè.jpg",
-      "address": "Via Giovanni Amendola 12/B, 10123 Torino",
+      "address": "Via Conte Rosso, 10121 Torino",
       "phone": "+39 011 0864985",
       "hours": "Lun-Sab: 18:00-02:00",
       "specialties": [
         "Cocktail"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0664691,
+      "lng": 7.6777847
     },
     {
       "id": "tutto-fa-brodo",
@@ -1063,14 +1181,16 @@
       "priceRange": "20-30",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/60. Tutto Fa Brodo.jpg",
-      "address": "Via Maria Vittoria 41, 10123 Torino",
+      "address": "Via Nizza 6, 10125 Torino",
       "phone": "+39 011 1921 1955",
       "hours": "Lun-Dom: 12:00-22:00",
       "specialties": [
         "Brodo",
         "Ramen"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0607369,
+      "lng": 7.6787648
     },
     {
       "id": "ue-ue-pizzeria",
@@ -1081,13 +1201,15 @@
       "priceRange": "12-22",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/61. UÈ UÈ PIZZERIA.jpg",
-      "address": "Via Giuseppe Baretti 12/E, 10125 Torino",
+      "address": "Via Nizza 60h, 10126 Torino",
       "phone": "+39 375 7171538",
       "hours": "Lun-Dom: 12:00-23:00",
       "specialties": [
         "Pizza"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0484489,
+      "lng": 7.6734096
     },
     {
       "id": "zichella",
@@ -1098,14 +1220,16 @@
       "priceRange": "8-14",
       "rating": 7,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/62. Zichella.jpg",
-      "address": "Via Saluzzo 71, 10126 Torino",
+      "address": "Via Gianmaria Testa, 10128 Torino",
       "phone": "+39 011 669 9076",
       "hours": "Lun-Sab: 07:00-20:00",
       "specialties": [
         "Caffè",
         "Colazione"
       ],
-      "reviews": []
+      "reviews": [],
+      "lat": 45.0515846,
+      "lng": 7.6737115
     }
   ],
   "categories": [

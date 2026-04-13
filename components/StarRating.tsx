@@ -5,51 +5,56 @@ import { useState } from "react";
 
 interface StarRatingProps {
   onRate: (rating: number) => void;
-  initialRating?: number;
+  currentRating?: number;
+  restaurantId?: string;
   interactive?: boolean;
   size?: "sm" | "md" | "lg";
+  initialRating?: number;
 }
 
 export default function StarRating({
   onRate,
-  initialRating = 0,
+  currentRating = 0,
+  restaurantId,
   interactive = true,
   size = "md",
+  initialRating = 0,
 }: StarRatingProps) {
   const [hoverRating, setHoverRating] = useState(0);
-  const displayRating = hoverRating || initialRating;
+  const rating = currentRating || initialRating;
 
   const sizeClasses = {
-    sm: "w-3.5 h-3.5",
+    sm: "w-4 h-4",
     md: "w-5 h-5",
-    lg: "w-6 h-6",
+    lg: "w-7 h-7",
+  };
+
+  const handleClick = (index: number) => {
+    const newRating = index + 1;
+    onRate(newRating);
   };
 
   return (
     <div className="flex gap-1">
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((star) => (
-        <button
-          key={star}
-          type="button"
-          onClick={() => interactive && onRate(star)}
-          onMouseEnter={() => interactive && setHoverRating(star)}
-          onMouseLeave={() => interactive && setHoverRating(0)}
-          className={`transition-all duration-150 ${
-            interactive
-              ? "cursor-pointer hover:scale-110"
-              : "cursor-default"
-          }`}
-          disabled={!interactive}
-        >
-          <Star
-            className={`${sizeClasses[size]} transition-colors duration-150 ${
-              star <= displayRating
-                ? "fill-amber-400 text-amber-400"
-                : "fill-gray-200 text-gray-200"
+      {[...Array(10)].map((_, index) => {
+        const isFilled = index < (hoverRating || rating);
+        return (
+          <button
+            key={index}
+            onClick={() => handleClick(index)}
+            onMouseEnter={() => interactive && setHoverRating(index + 1)}
+            onMouseLeave={() => setHoverRating(0)}
+            disabled={!interactive}
+            className={`transition-all ${interactive ? "cursor-pointer" : "cursor-default"} ${
+              isFilled ? "text-yellow-400" : "text-gray-300"
             }`}
-          />
-        </button>
-      ))}
+          >
+            <Star
+              className={`${sizeClasses[size]} ${isFilled ? "fill-yellow-400" : ""}`}
+            />
+          </button>
+        );
+      })}
     </div>
   );
 }

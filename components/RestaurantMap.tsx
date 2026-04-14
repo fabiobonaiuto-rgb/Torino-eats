@@ -47,6 +47,9 @@ function MapFocusController({ focusedRestaurant }: { focusedRestaurant?: Restaur
   const map = useMap();
 
   useEffect(() => {
+    if (focusedRestaurant) {
+      console.log('focusedRestaurant:', focusedRestaurant, 'lat type:', typeof focusedRestaurant.lat, 'lng type:', typeof focusedRestaurant.lng);
+    }
     if (
       focusedRestaurant &&
       typeof focusedRestaurant.lat === 'number' &&

@@ -107,8 +107,14 @@ export default function RestaurantMap({ restaurants, mapStyle = "osm", focusedRe
     setMounted(true);
   }, []);
 
-  // Filtra ristoranti che hanno coordinate
-  const restaurantsWithCoords = restaurants.filter((r) => r.lat && r.lng);
+  // Filtra ristoranti che hanno coordinate valide (numeri, non NaN)
+  const restaurantsWithCoords = restaurants.filter(
+    (r) =>
+      typeof r.lat === 'number' &&
+      typeof r.lng === 'number' &&
+      !isNaN(r.lat) &&
+      !isNaN(r.lng)
+  );
 
   // Centro della mappa (Torino)
   const center: [number, number] = [45.0705, 7.6868];

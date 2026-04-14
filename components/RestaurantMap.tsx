@@ -47,7 +47,15 @@ function MapFocusController({ focusedRestaurant }: { focusedRestaurant?: Restaur
   const map = useMap();
 
   useEffect(() => {
-    if (focusedRestaurant?.lat && focusedRestaurant?.lng) {
+    if (
+      focusedRestaurant &&
+      typeof focusedRestaurant.lat === 'number' &&
+      typeof focusedRestaurant.lng === 'number' &&
+      !isNaN(focusedRestaurant.lat) &&
+      !isNaN(focusedRestaurant.lng) &&
+      focusedRestaurant.lat > 0 &&
+      focusedRestaurant.lng > 0
+    ) {
       map.flyTo([focusedRestaurant.lat, focusedRestaurant.lng], 17, {
         duration: 1.5,
         easeLinearity: 0.25,

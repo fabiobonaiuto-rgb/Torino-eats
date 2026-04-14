@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
+import { motion } from "framer-motion";
 import "leaflet/dist/leaflet.css";
 
 interface Restaurant {
@@ -19,26 +20,43 @@ interface Restaurant {
 interface RestaurantMapProps {
   restaurants: Restaurant[];
   mapStyle?: "osm" | "dark" | "satellite" | "positron" | "toner" | "voyager";
+  focusedRestaurant?: Restaurant | null;
 }
 
-// Marker icon granata personalizzato
-const createGranataIcon = () => {
+// Marker icon personalizzato con colore preciso
+const createRestaurantIcon = () => {
   const svgIcon = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 0 32 40">
-      <path d="M16 2C9.4 2 4 7.4 4 14c0 7 12 26 12 26s12-19 12-26c0-6.6-5.4-12-12-12z" fill="#a81c39"/>
-      <circle cx="16" cy="14" r="4" fill="white"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="48" viewBox="0 0 32 48">
+      <path d="M16 2C8.27 2 2 8.27 2 16c0 8 14 30 14 30s14-22 14-30c0-7.73-6.27-14-14-14z" fill="#A01C3C"/>
+      <circle cx="16" cy="16" r="5" fill="white"/>
     </svg>
   `;
 
   return L.icon({
     iconUrl: `data:image/svg+xml;base64,${btoa(svgIcon)}`,
-    iconSize: [32, 40],
-    iconAnchor: [16, 40],
-    popupAnchor: [0, -40],
+    iconSize: [32, 48],
+    iconAnchor: [16, 48],
+    popupAnchor: [0, -48],
   });
 };
 
-const granataIcon = createGranataIcon();
+const restaurantIcon = createRestaurantIcon();
+
+// Componente hook per gestire il focus sulla mappa
+function MapFocusController({ focusedRestaurant }: { focusedRestaurant?: Restaurant | null }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (focusedRestaurant && focusedRestaurant.lat && focusedRestaurant.lng) {
+      map.flyTo([focusedRestaurant.lat, focusedRestaurant.lng], 17, {
+        duration: 1.5,
+        easeLinearity: 0.25,
+      });
+    }
+  }, [focusedRestaurant, map]);
+
+  return null;
+}
 
 const mapStyles = {
   osm: {
@@ -73,7 +91,7 @@ const mapStyles = {
   },
 };
 
-export default function RestaurantMap({ restaurants, mapStyle = "osm" }: RestaurantMapProps) {
+export default function RestaurantMap({ restaurants, mapStyle = "osm", focusedRestaurant }: RestaurantMapProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -106,22 +124,24 @@ export default function RestaurantMap({ restaurants, mapStyle = "osm" }: Restaur
   }
 
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-full relative" style={{ minHeight: "600px" }}>
       <MapContainer
         center={center}
-        zoom={13}
-        style={{ width: "100%", height: "100%" }}
+        zoom={15}
+        className="w-full h-full"
       >
         <TileLayer
           url={mapStyles[mapStyle].url}
           attribution={mapStyles[mapStyle].attribution}
         />
 
+        <MapFocusController focusedRestaurant={focusedRestaurant} />
+
         {restaurantsWithCoords.map((restaurant) => (
           <Marker
             key={restaurant.id}
             position={[restaurant.lat!, restaurant.lng!]}
-            icon={granataIcon}
+            icon={restaurantIcon}
           >
             <Popup>
               <div className="w-48">
@@ -148,7 +168,12 @@ export default function RestaurantMap({ restaurants, mapStyle = "osm" }: Restaur
       </MapContainer>
 
       {/* Legend */}
-      <div className="absolute bottom-6 left-6 bg-white rounded-lg shadow-lg p-4 max-w-xs z-40">
+      <motion.div
+        className="absolute bottom-6 left-6 bg-white rounded-lg shadow-lg p-4 max-w-xs z-40"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.35, delay: 0.45, ease: [0.23, 1, 0.32, 1] }}
+      >
         <h3 className="font-semibold text-gray-900 mb-2">Legenda</h3>
         <p className="text-sm text-gray-600">
           {restaurantsWithCoords.length} ristorante{restaurantsWithCoords.length !== 1 ? "i" : ""} sulla mappa
@@ -156,7 +181,7 @@ export default function RestaurantMap({ restaurants, mapStyle = "osm" }: Restaur
         <p className="text-xs text-gray-500 mt-2">
           Clicca su un marker per vedere i dettagli
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }

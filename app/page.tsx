@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Heart, MapPin, Star, Search, ArrowRight, Plus, Pencil, Trash2, Map } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import AddRestaurantModal from "@/components/AddRestaurantModal";
 import EditRestaurantModal from "@/components/EditRestaurantModal";
 import StarRating from "@/components/StarRating";
@@ -202,64 +203,42 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ background: "linear-gradient(to bottom, #B80036 0%, #520018 69%)" }}>
       {/* Hero Section with integrated controls */}
-      <div className="relative">
-        <HeroSection restaurantCount={restaurants.length} />
-        {isClient && (
-          <div className="absolute top-8 right-8 z-50 flex items-center gap-2">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-colors hover:scale-110 hover:rotate-90 duration-300"
-            >
-              <Plus className="w-5 h-5" style={{ color: "#a81c39" }} strokeWidth={3} />
-            </button>
-            <Link
-              href="/map"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <div className="hover:scale-110 transition-transform duration-300">
-                <Map className="w-5 h-5" style={{ color: "#a81c39" }} />
-              </div>
-              <span className="text-sm font-medium text-gray-700 hidden sm:inline">
-                Mappa
-              </span>
-            </Link>
-            <Link
-              href="/favorites"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <div className="hover:scale-150 transition-transform duration-300">
-                <Heart className="w-5 h-5 fill-current" style={{ color: "#a81c39" }} />
-              </div>
-              <span className="text-sm font-medium text-gray-700">
-                {favorites.length}
-              </span>
-            </Link>
-          </div>
-        )}
-      </div>
+      <HeroSection
+        restaurantCount={restaurants.length}
+        onAddRestaurant={() => setIsModalOpen(true)}
+      />
 
       {/* Search Bar */}
-      <div className="bg-white border-b border-gray-100 px-4 sm:px-6 lg:px-8 py-4">
+      <motion.div
+        className="border-b border-white/15 px-4 sm:px-6 lg:px-8 py-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col gap-4">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <label htmlFor="search-restaurants" className="sr-only">
+                Cerca ristorante
+              </label>
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 pointer-events-none z-10" style={{ color: "rgba(255,255,255,0.9)" }} />
               <input
+                id="search-restaurants"
                 type="text"
                 placeholder="Cerca ristorante..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all text-gray-900 placeholder-gray-700"
+                className="w-full pl-12 pr-4 py-3 border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-white/50 focus:border-white/40 transition-all text-white placeholder-white/50"
               />
             </div>
             <div className="flex gap-2 flex-wrap">
-              <span className="text-sm text-gray-600 font-medium self-center">Ordina per:</span>
+              <span className="text-sm text-white/80 font-medium self-center">Ordina per:</span>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as "name" | "recent" | "rating")}
-                className="px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors cursor-pointer focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                className="px-3 py-2 border border-white/20 rounded-lg text-sm font-medium text-white bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-colors cursor-pointer focus:ring-2 focus:ring-white/50 focus:border-white/40"
               >
                 <option value="name">Alfabetico (A-Z)</option>
                 <option value="recent">Ultima aggiunta</option>
@@ -268,15 +247,20 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Categories Filter */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 w-full px-4 sm:px-6 lg:px-8 py-4">
-        <div className="max-w-7xl mx-auto flex gap-1 overflow-x-auto pb-2">
+      <nav className="sticky top-0 z-50 border-b border-white/15 w-full px-4 sm:px-6 lg:px-8 py-4 backdrop-blur-sm bg-black/10">
+        <motion.div
+          className="max-w-7xl mx-auto flex gap-1 overflow-x-auto pb-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
+        >
           <button
             onClick={() => setSelectedCategory(null)}
-            style={selectedCategory === null ? { backgroundColor: "#a81c39", color: "white" } : { backgroundColor: "#e5e7eb", color: "#374151" }}
-            className="px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0 hover:opacity-80"
+            style={selectedCategory === null ? { backgroundColor: "rgba(255, 255, 255, 0.2)", color: "white", borderColor: "rgba(255, 255, 255, 0.4)" } : { backgroundColor: "rgba(255, 255, 255, 0.1)", color: "rgba(255, 255, 255, 0.7)", borderColor: "rgba(255, 255, 255, 0.2)" }}
+            className="px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0 hover:bg-white/15 border"
           >
             Tutti
           </button>
@@ -284,43 +268,50 @@ export default function Home() {
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.name)}
-              style={selectedCategory === cat.name ? { backgroundColor: "#a81c39", color: "white" } : { backgroundColor: "#e5e7eb", color: "#374151" }}
-              className="px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0 hover:opacity-80"
+              style={selectedCategory === cat.name ? { backgroundColor: "rgba(255, 255, 255, 0.2)", color: "white", borderColor: "rgba(255, 255, 255, 0.4)" } : { backgroundColor: "rgba(255, 255, 255, 0.1)", color: "rgba(255, 255, 255, 0.7)", borderColor: "rgba(255, 255, 255, 0.2)" }}
+              className="px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0 hover:bg-white/15 border"
             >
               {cat.name}
             </button>
           ))}
-        </div>
+        </motion.div>
       </nav>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         {/* Category Header */}
         {selectedCategory && (
-          <div className="mb-12 pb-8 border-b border-gray-100">
-            <h2 className="text-4xl font-bold text-gray-900 mb-2 tracking-tight">
+          <motion.div
+            className="mb-12 pb-8 border-b border-white/15"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-2 tracking-tight">
               {selectedCategory}
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-white/80 text-lg">
               {categories.find((c) => c.name === selectedCategory)?.description}
             </p>
-          </div>
+          </motion.div>
         )}
 
         {/* Grid di Ristoranti */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {isClient && restaurants.length > 0 ? (
             filteredRestaurants.map((restaurant, index) => (
-            <Link
+            <motion.div
               key={restaurant.id}
-              href={`/restaurant/${restaurant.id}`}
-              onMouseEnter={() => setHoveredRestaurantId(restaurant.id)}
-              onMouseLeave={() => setHoveredRestaurantId(null)}
-              style={{
-                animation: `fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.05}s both`,
-              }}
-              className="group rounded-2xl overflow-hidden bg-white border border-gray-200 flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05, ease: [0.23, 1, 0.32, 1] }}
             >
+              <Link
+                href={`/restaurant/${restaurant.id}`}
+                onMouseEnter={() => setHoveredRestaurantId(restaurant.id)}
+                onMouseLeave={() => setHoveredRestaurantId(null)}
+                className="group rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20 flex flex-col transition-all duration-300 hover:border-white/40 hover:shadow-lg hover:bg-white/15 h-full"
+              >
               {/* Immagine */}
               <div className="flex-shrink-0 relative">
                 <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 aspect-video">
@@ -383,61 +374,95 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Content */}
-              <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                  {restaurant.name}
-                </h3>
+                {/* Content */}
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-lg font-bold text-white mb-2 line-clamp-2">
+                    {restaurant.name}
+                  </h3>
 
-                {/* Location & Price */}
-                <div className="flex items-center justify-between text-xs mb-2 flex-grow-0">
-                  <span className="text-gray-500">{restaurant.address}</span>
-                  <span className="font-medium text-gray-500">€{restaurant.priceRange}</span>
-                </div>
+                  {/* Location & Price */}
+                  <div className="flex items-center justify-between text-xs mb-2 flex-grow-0">
+                    <span className="text-white/70 truncate">{restaurant.address}</span>
+                    <span className="font-medium text-white/80 ml-2 flex-shrink-0">€{restaurant.priceRange}</span>
+                  </div>
 
-                {/* Cuisine */}
-                <div className="mb-3">
-                  <span className="font-medium text-sm" style={{ color: "#a81c39" }}>
-                    {restaurant.cuisine}
-                  </span>
-                </div>
+                  {/* Cuisine */}
+                  <div className="mb-3">
+                    <span className="font-medium text-sm text-white">
+                      {restaurant.cuisine}
+                    </span>
+                  </div>
 
-                {/* Description */}
-                <p className="text-sm text-gray-600 mb-4 line-clamp-2 flex-grow">
-                  {restaurant.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-sm text-white/80 mb-4 line-clamp-2 flex-grow">
+                    {restaurant.description}
+                  </p>
 
-                {/* Footer */}
-                <div className="flex flex-col gap-4 pt-4 border-t border-gray-100 flex-grow-0">
-                  <div className="flex items-center justify-between">
-                    <div className="flex flex-col gap-1.5">
-                      <p className="text-xs text-gray-500 font-medium">Il tuo voto</p>
-                      <StarRating
-                        onRate={(rating) => handleRating(restaurant.id, rating)}
-                        initialRating={ratings[restaurant.id] || 0}
-                        interactive
-                        size="sm"
-                      />
+                  {/* Footer */}
+                  <div className="flex flex-col gap-4 pt-4 border-t border-white/10 flex-grow-0">
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-col gap-1.5">
+                        <p className="text-xs text-white/70 font-medium">Il tuo voto</p>
+                        <StarRating
+                          onRate={(rating) => handleRating(restaurant.id, rating)}
+                          initialRating={ratings[restaurant.id] || 0}
+                          interactive
+                          size="sm"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
             ))
           ) : (
             [...Array(6)].map((_, i) => (
-              <div key={i} className="rounded-2xl bg-gray-100 h-64 animate-pulse" />
+              <motion.div
+                key={i}
+                className="rounded-2xl bg-white/10 h-64 animate-pulse backdrop-blur-sm border border-white/20"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: i * 0.05 }}
+              />
             ))
           )}
         </div>
 
         {/* Empty State */}
         {isClient && filteredRestaurants.length === 0 && (
-          <div className="text-center py-24">
-            <p className="text-gray-600 text-lg">
-              Nessun ristorante trovato in questa categoria.
-            </p>
-          </div>
+          <motion.div
+            className="text-center py-24"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+          >
+            {restaurants.length === 0 ? (
+              <>
+                <p className="text-white text-2xl font-semibold mb-2">
+                  Nessun ristorante ancora
+                </p>
+                <p className="text-white/80 text-lg mb-6">
+                  Aggiungi il tuo primo ristorante preferito di Torino
+                </p>
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="inline-block px-6 py-3 rounded-lg font-medium text-white transition-all duration-200 bg-white/20 hover:bg-white/30 border border-white/40"
+                >
+                  + Aggiungi ristorante
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="text-white text-2xl font-semibold mb-2">
+                  Nessun risultato trovato
+                </p>
+                <p className="text-white/80 text-lg">
+                  Prova a modificare la ricerca o la categoria selezionata
+                </p>
+              </>
+            )}
+          </motion.div>
         )}
       </main>
 

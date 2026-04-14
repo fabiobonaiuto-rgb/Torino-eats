@@ -30,7 +30,7 @@
       "priceRange": "12-20",
       "rating": 8,
       "image": "https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/Images/Restaurants/2. Bello e Buono.jpg",
-      "address": "Corso Vittorio Emanuele II 130, 10138 Torino",
+      "address": "Via Carlo Alberto, 27/B, 10123 Torino",
       "phone": "+39 011 000 0000",
       "hours": "Lun-Sab: 17:00-01:00",
       "specialties": [
@@ -38,8 +38,8 @@
         "Stuzzichini"
       ],
       "reviews": [],
-      "lat": 45.0714883,
-      "lng": 7.6582138
+      "lat": 45.0673,
+      "lng": 7.6867
     },
     {
       "id": "bicyclette",

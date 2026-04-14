@@ -42,7 +42,6 @@ export default function MapPage() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   useEffect(() => {
@@ -87,21 +86,8 @@ export default function MapPage() {
 
   let filteredRestaurants = restaurants.filter((r) => {
     const matchCategory = selectedCategory ? r.category === selectedCategory : true;
-    const matchSearch = r.name.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchCategory && matchSearch;
+    return matchCategory;
   });
-
-  const focusedRestaurant = searchQuery.trim()
-    ? (() => {
-        const found = restaurants.find((r) => r.name.toLowerCase().includes(searchQuery.toLowerCase()) && r.lat && r.lng);
-        if (!found) return null;
-        // Fix: se le coordinate sembrano invertite (lat < 10 e lng > 40), scambiarle
-        if (found.lat && found.lng && found.lat < 15 && found.lng > 40) {
-          return { ...found, lat: found.lng, lng: found.lat };
-        }
-        return found;
-      })()
-    : null;
 
   if (isLoading) {
     return (
@@ -135,26 +121,6 @@ export default function MapPage() {
               transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
             >
               <div className="p-6 flex flex-col h-full overflow-hidden">
-              {/* Search Bar */}
-              <div className="relative mb-8">
-                <label htmlFor="search-map-restaurants-desktop" className="sr-only">
-                  Cerca ristorante
-                </label>
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5" style={{ color: "rgba(255,255,255,0.9)" }} />
-                <input
-                  id="search-map-restaurants-desktop"
-                  type="text"
-                  placeholder="Cerca Ristorante"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 rounded-full text-white placeholder-white/50 focus:outline-none transition-all border border-white/20"
-                  style={{
-                    backgroundColor: "rgba(255,255,255,0.1)",
-                    fontSize: "14px",
-                  }}
-                />
-              </div>
-
               {/* Categories Heading */}
               <h3 className="text-white mb-4" style={{ fontSize: "14px", fontWeight: 500 }}>
                 Categorie
@@ -215,7 +181,7 @@ export default function MapPage() {
           <RestaurantMap
             restaurants={filteredRestaurants}
             mapStyle="voyager"
-            focusedRestaurant={focusedRestaurant}
+            focusedRestaurant={null}
           />
         </motion.div>
       </div>
@@ -251,22 +217,6 @@ export default function MapPage() {
           transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
           className="overflow-hidden border-b border-white/15 px-5 pb-5 flex-shrink-0"
         >
-          {/* Search Bar */}
-          <div className="relative mb-5">
-            <label htmlFor="search-map-restaurants" className="sr-only">
-              Cerca ristorante
-            </label>
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 pointer-events-none z-10" style={{ color: "white" }} />
-            <input
-              id="search-map-restaurants"
-              type="text"
-              placeholder="Cerca Ristorante..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm focus:ring-2 focus:ring-white/50 focus:border-white/40 transition-all text-white placeholder-white/50"
-            />
-          </div>
-
           {/* Categories */}
           <div>
             <h3 className="text-white/90 text-sm font-medium mb-3">Categorie</h3>
@@ -312,7 +262,7 @@ export default function MapPage() {
           <RestaurantMap
             restaurants={filteredRestaurants}
             mapStyle="voyager"
-            focusedRestaurant={focusedRestaurant}
+            focusedRestaurant={null}
           />
         </motion.div>
       </div>

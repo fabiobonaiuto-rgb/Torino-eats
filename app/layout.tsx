@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Torino Eats",
   description: "Scopri i migliori posti dove mangiare a Torino",
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.svg',
   },
 };
 

@@ -92,7 +92,7 @@ export default function MapPage() {
   });
 
   const focusedRestaurant = searchQuery.trim()
-    ? restaurants.find((r) => r.name.toLowerCase().includes(searchQuery.toLowerCase())) || null
+    ? restaurants.find((r) => r.name.toLowerCase().includes(searchQuery.toLowerCase()) && r.lat && r.lng) || null
     : null;
 
   if (isLoading) {

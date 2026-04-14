@@ -47,24 +47,11 @@ function MapFocusController({ focusedRestaurant }: { focusedRestaurant?: Restaur
   const map = useMap();
 
   useEffect(() => {
-    if (!map || !focusedRestaurant) {
-      console.log('Skipping flyTo: map exists?', !!map, 'focusedRestaurant exists?', !!focusedRestaurant);
-      return;
-    }
-
-    const lat = focusedRestaurant.lat;
-    const lng = focusedRestaurant.lng;
-
-    console.log('Checking coords:', { lat, lng, latType: typeof lat, lngType: typeof lng, latIsNum: typeof lat === 'number', lngIsNum: typeof lng === 'number', latNaN: isNaN(lat), lngNaN: isNaN(lng) });
-
-    if (typeof lat === 'number' && typeof lng === 'number' && !isNaN(lat) && !isNaN(lng)) {
-      console.log('FlyTo called with:', [lat, lng]);
-      map.flyTo([lat, lng], 17, {
+    if (focusedRestaurant?.lat && focusedRestaurant?.lng) {
+      map.flyTo([focusedRestaurant.lat, focusedRestaurant.lng], 17, {
         duration: 1.5,
         easeLinearity: 0.25,
       });
-    } else {
-      console.warn('Invalid coordinates for flyTo:', { lat, lng });
     }
   }, [focusedRestaurant, map]);
 

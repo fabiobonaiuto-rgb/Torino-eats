@@ -66,17 +66,7 @@ export default function MapPage() {
         }
 
         // Applica le modifiche
-        allRestaurants = allRestaurants.map((r) => {
-          const edited = editsMap[r.id];
-          if (edited) {
-            // Fix: se le coordinate sono invertite (lng > lat), scambiarle
-            if (edited.lat && edited.lng && edited.lat < 10 && edited.lng > 40) {
-              return { ...edited, lat: edited.lng, lng: edited.lat };
-            }
-            return edited;
-          }
-          return r;
-        });
+        allRestaurants = allRestaurants.map((r) => editsMap[r.id] || r);
 
         // Filtra eliminati
         const savedDeleted = localStorage.getItem("deletedRestaurants");

@@ -92,7 +92,15 @@ export default function MapPage() {
   });
 
   const focusedRestaurant = searchQuery.trim()
-    ? restaurants.find((r) => r.name.toLowerCase().includes(searchQuery.toLowerCase()) && r.lat && r.lng) || null
+    ? (() => {
+        const found = restaurants.find((r) => r.name.toLowerCase().includes(searchQuery.toLowerCase()) && r.lat && r.lng);
+        if (!found) return null;
+        // Fix: se le coordinate sembrano invertite (lat < 10 e lng > 40), scambiarle
+        if (found.lat && found.lng && found.lat < 15 && found.lng > 40) {
+          return { ...found, lat: found.lng, lng: found.lat };
+        }
+        return found;
+      })()
     : null;
 
   if (isLoading) {

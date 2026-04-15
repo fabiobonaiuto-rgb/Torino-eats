@@ -79,9 +79,16 @@ export const MinimalistHero = ({
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg md:text-xl font-semibold text-white tracking-wide"
+          className="text-white"
+          style={{
+            fontFamily: 'Georgia, serif',
+            fontStyle: 'italic',
+            fontSize: 'clamp(1rem, 3vw, 1.5rem)',
+            fontWeight: 300,
+            letterSpacing: '-0.03em',
+          }}
         >
-          {logoText}.
+          {logoText}
         </motion.div>
 
         {/* Desktop: Icon Buttons - Pill Container */}

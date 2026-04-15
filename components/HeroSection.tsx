@@ -10,7 +10,7 @@ interface HeroSectionProps {
 export const HeroSection = ({ restaurantCount, onAddRestaurant }: HeroSectionProps) => {
   return (
     <MinimalistHero
-      logoText="Torino Eats"
+      logoText="Scopri Torino"
       titleText="Turin Eats"
       mainText="Scopri i migliori ristoranti autentici di Torino. Niente AI, niente trend generici. Solo vera cucina torinese."
       imageSrc="https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/mole-antonelliana.png"

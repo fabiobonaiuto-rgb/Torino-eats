@@ -11,7 +11,7 @@ export const HeroSection = ({ restaurantCount, onAddRestaurant }: HeroSectionPro
   return (
     <MinimalistHero
       logoText="Scopri Torino"
-      titleText="Turin Eats"
+      titleText="Torino Eats"
       mainText="Scopri i migliori ristoranti autentici di Torino. Niente AI, niente trend generici. Solo vera cucina torinese."
       imageSrc="https://cdn.jsdelivr.net/gh/fabiobonaiuto-rgb/Torino-eats@main/public/mole-antonelliana.png"
       imageAlt="Mole Antonelliana di Torino"
